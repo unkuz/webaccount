@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Wix_Madefor_Display } from "next/font/google";
 import "@/styles/global.scss";
 import { Header } from "@/components/Header";
+import {clsx} from 'clsx'
+import { Hero } from "@/components/Hero";
 
-const inter = Inter({ subsets: ["latin"] });
+const wixMadeforDisplay = Wix_Madefor_Display({ subsets: ["vietnamese"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,12 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header/>
+      <body className={clsx(wixMadeforDisplay.className,'xl:w-[1500px] w-full mx-auto pb-[100px] px-[10px]')}>
+        <Header />
+        <div className="h-[20px]" />
         {children}
-        
-        
-        </body>
+      </body>
     </html>
   );
 }
