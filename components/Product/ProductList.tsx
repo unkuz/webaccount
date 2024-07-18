@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { ProductCard } from './ProductCard'
 import ArrowCircleIcon from '@/assets/svgs/arrow-circle-icon.svg'
 import Image from 'next/image'
+import { listProduct } from '@/app/product.data'
 
 export const ProductList = () => {
   const [type, setType] = useState(['tất cả', 'học tập', 'giải trí', 'phim ảnh'])
@@ -27,7 +28,7 @@ export const ProductList = () => {
   const isDisabledBtn = (i: string) => i === selected
   return (
     <div className="flex flex-col gap-[8px]">
-      <h2 className="text-[18px] font-semibold">Sản phẩm đang bán </h2>
+      <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>
       <div className="flex gap-[10px] flex-wrap">
         {type.map((i, idx) => (
           <button
@@ -54,8 +55,8 @@ export const ProductList = () => {
         ))}
       </div>
       <div className="grid xl:grid-cols-3 grid-cols-2 gap-x-[15px] gap-y-[20px] mt-[5px]">
-        {[1, 2].map((i) => (
-          <ProductCard key={i} />
+        {listProduct.map((i, idx) => (
+          <ProductCard key={idx} {...i} />
         ))}
       </div>
     </div>
