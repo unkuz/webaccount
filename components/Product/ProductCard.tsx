@@ -1,4 +1,5 @@
-import { useMemo } from "react"
+import { useEffect, useMemo, useRef } from 'react'
+import VanillaTilt from 'vanilla-tilt'
 
 type Props = {
   product: string
@@ -19,12 +20,23 @@ export const ProductCard = ({
   type,
   svg,
 }: Props): JSX.Element => {
+  const elRef = useRef<HTMLDivElement>(null)
 
-  const description = useMemo(()=>{
+  const description = useMemo(() => {
     return `${productFull} ${duration} - ${type}`
-  },[])
+  }, [])
+
+  useEffect(() => {
+    VanillaTilt.init(elRef.current!, {
+      scale: 1.2,
+      glare: true,
+      speed: 2_000,
+      gyroscope: true,
+    })
+  }, [])
   return (
     <div
+      ref={elRef}
       className="w-full relative bg-[#c2fbff] rounded-[20px]
       before:content-[''] before:absolute before:top-[-3px] before:left-[-3px] before:right-[-3px]
       before:bottom-[-3px] before:border-[3px] before:border-[#61e7ff] before:animate-clippath
@@ -38,9 +50,10 @@ export const ProductCard = ({
       duration-500
       shadow-md
       p-[10px]
+      hover:z-[1]
       "
     >
-      <div className="w-full aspect-[2.3/1] bg-[#9de8ff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
+      <div className="w-full aspect-[2.3/1] bg-[#aeecff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
         <div>
           <p className="font-bold text-[25px]">Gói gia hạn</p>
           <p className="font-extrabold text-[60px] text-[#000000]">{product}</p>
