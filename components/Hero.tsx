@@ -28,7 +28,7 @@ export const Hero = () => {
   return (
     <div
       ref={sliderRef}
-      className="keen-slider rounded-[20px] text-[1.5rem] shadow-xl *:flex *:items-center *:justify-center *:text-black sm:text-[2rem] lg:!aspect-[3.5/1] aspect-[2.5/1] lg:text-[3.5rem]"
+      className="keen-slider relative rounded-[20px] text-[1.5rem] shadow-xl *:flex *:items-center *:justify-center *:text-black sm:text-[2rem] lg:!aspect-[3.5/1] aspect-[2.5/1] lg:text-[3.5rem]"
     >
       <div className="keen-slider__slide  bg-[#93ec58] px-[20px] font-bold">
         <p className="text-center">Web bán Account Premium giá rẻ</p>
