@@ -1,3 +1,3 @@
-const TIMER_HERO = 1_500;
+const TIMER_HERO = 1_500
 
-export { TIMER_HERO };
+export { TIMER_HERO }

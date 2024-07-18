@@ -1,13 +1,13 @@
-import { Hero } from "@/components/Hero";
-import { ProductList } from "@/components/Product/ProductList";
-import Image from "next/image";
+import { Hero } from '@/components/Hero'
+import { ProductList } from '@/components/Product/ProductList'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <div>
-      <Hero/>
-      <div className="h-[15px]"></div>
-      <ProductList/>
+      <Hero />
+      <div className="h-[20px]"></div>
+      <ProductList />
     </div>
-  );
+  )
 }

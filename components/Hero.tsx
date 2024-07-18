@@ -1,29 +1,29 @@
-"use client";
-import { TIMER_HERO } from "@/app/config";
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
-import { useEffect, useRef } from "react";
+'use client'
+import { TIMER_HERO } from '@/app/config'
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react'
+import { useEffect, useRef } from 'react'
 
 export const Hero = () => {
-  const timer = useRef<NodeJS.Timeout>();
+  const timer = useRef<NodeJS.Timeout>()
   const [sliderRef, instanceRef] = useKeenSlider(
     {
-      renderMode: "performance",
-      loop:true,
+      renderMode: 'performance',
+      loop: true,
       slideChanged() {},
     },
-    []
-  );
+    [],
+  )
 
   useEffect(() => {
     timer.current = setInterval(() => {
-      instanceRef.current?.next();
-    }, TIMER_HERO);
+      instanceRef.current?.next()
+    }, TIMER_HERO)
 
     return () => {
-      clearInterval(timer.current);
-    };
-  });
+      clearInterval(timer.current)
+    }
+  })
 
   return (
     <div
@@ -34,13 +34,11 @@ export const Hero = () => {
         <p className="text-center">Web bán Account Premium giá rẻ</p>
       </div>
       <div className="keen-slider__slide  bg-[#58dbec] px-[20px] font-semibold">
-        <p className="text-center">
-          Uy tín, chất lượng, bảo hành trọn thời gian sử dụng
-        </p>
+        <p className="text-center">Uy tín, chất lượng, bảo hành trọn thời gian sử dụng</p>
       </div>
       <div className="keen-slider__slide  bg-[#9f69e7] px-[20px] font-semibold">
         <p className="text-center">Ở đâu bán rẻ, chúng tôi còn bán rẻ hơn !</p>
       </div>
     </div>
-  );
-};
+  )
+}
