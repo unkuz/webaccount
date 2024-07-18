@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.{js,ts,tsx}\" \"**/*.md\""
+    "format": "prettier --write \"./**/*.{js,ts,tsx}\" \"**/*.md\"",
+    "analyze":"set ANALYZE=true &&yarn build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.5",
     "clsx": "^2.1.1",
     "keen-slider": "^6.8.6",
     "next": "14.2.5",
