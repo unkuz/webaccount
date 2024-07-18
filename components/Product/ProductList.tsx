@@ -35,7 +35,7 @@ export const ProductList = () => {
             onClick={() => onSelect(i)}
             disabled={isDisabledBtn(i)}
             className={clsx(
-              'px-[13px] h-[38px] bg-[#fff0] rounded-[38px] font-bold capitalize flex items-center gap-[5px]',
+              'px-[13px] h-[38px] bg-[#fff0] rounded-[38px] font-bold capitalize flex items-center gap-[5px] duration-200',
 
               selected !== i ? 'ring-1 ring-inset ring-gray-300' : ' bg-[black] text-white',
             )}
@@ -54,7 +54,7 @@ export const ProductList = () => {
         ))}
       </div>
       <div className="grid xl:grid-cols-3 grid-cols-2 gap-x-[15px] gap-y-[20px] mt-[5px]">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+        {[1, 2].map((i) => (
           <ProductCard key={i} />
         ))}
       </div>

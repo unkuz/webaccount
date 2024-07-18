@@ -30,13 +30,13 @@ export const Hero = () => {
       ref={sliderRef}
       className="keen-slider rounded-[20px] text-[1.5rem] shadow-xl *:flex *:items-center *:justify-center *:text-black sm:text-[2rem] lg:!aspect-[3.5/1] aspect-[2.5/1] lg:text-[3.5rem]"
     >
-      <div className="keen-slider__slide  bg-[#93ec58] px-[20px] font-semibold">
+      <div className="keen-slider__slide  bg-[#93ec58] px-[20px] font-bold">
         <p className="text-center">Web bán Account Premium giá rẻ</p>
       </div>
-      <div className="keen-slider__slide  bg-[#58dbec] px-[20px] font-semibold">
+      <div className="keen-slider__slide  bg-[#58dbec] px-[20px] font-bold">
         <p className="text-center">Uy tín, chất lượng, bảo hành trọn thời gian sử dụng</p>
       </div>
-      <div className="keen-slider__slide  bg-[#9f69e7] px-[20px] font-semibold">
+      <div className="keen-slider__slide  bg-[#9f69e7] px-[20px] font-bold">
         <p className="text-center">Ở đâu bán rẻ, chúng tôi còn bán rẻ hơn !</p>
       </div>
     </div>
