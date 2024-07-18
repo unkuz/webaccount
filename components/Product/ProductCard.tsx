@@ -28,9 +28,9 @@ export const ProductCard = ({
 
   useEffect(() => {
     VanillaTilt.init(elRef.current!, {
-      scale: 1.2,
+      scale: 1.0,
       glare: true,
-      speed: 2_000,
+      speed: 10_000,
       gyroscope: true,
     })
   }, [])
@@ -51,6 +51,7 @@ export const ProductCard = ({
       shadow-md
       p-[10px]
       hover:z-[1]
+      cursor-pointer
       "
     >
       <div className="w-full aspect-[2.3/1] bg-[#aeecff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
