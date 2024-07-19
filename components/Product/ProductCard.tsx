@@ -40,7 +40,7 @@ export const ProductCard = ({
       <Link href={`/product/${Math.random()}`}>
         <div
           ref={elRef}
-          className="w-full relative bg-[#c2fbff] rounded-[20px]
+          className="w-full relative bg-[#a9f9ff] rounded-[20px]
     before:content-[''] before:absolute before:top-[-3px] before:left-[-3px] before:right-[-3px]
     before:bottom-[-3px] before:border-[3px] before:border-[#61e7ff] before:animate-clippath
     before:rounded-[25px] after:content-[''] after:absolute after:top-[-3px] after:left-[-3px]
@@ -57,7 +57,7 @@ export const ProductCard = ({
     cursor-pointer
     "
         >
-          <div className="w-full aspect-[2.3/1] bg-[#aeecff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
+          <div className="w-full aspect-[2.3/1] bg-[#86e2fc] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
             <div>
               <p className="font-bold text-[20px]">Gói gia hạn</p>
               <p className="font-extrabold text-[35px] text-[#000000]">{product}</p>
