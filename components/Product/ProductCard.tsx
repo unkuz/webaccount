@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Link from 'next/link'
 import { useEffect, useMemo, useRef } from 'react'
 import VanillaTilt from 'vanilla-tilt'
@@ -10,6 +11,8 @@ type Props = {
   preSale: string
   type: string
   svg: string
+  setCurrentHover: (i: string) => void
+  currentHover: string
 }
 
 export const ProductCard = ({
@@ -20,6 +23,8 @@ export const ProductCard = ({
   preSale,
   type,
   svg,
+  setCurrentHover,
+  currentHover,
 }: Props): JSX.Element => {
   const elRef = useRef<HTMLDivElement>(null)
 
@@ -30,9 +35,7 @@ export const ProductCard = ({
   useEffect(() => {
     VanillaTilt.init(elRef.current!, {
       scale: 1.1,
-      glare: true,
       speed: 2_000,
-      gyroscope: true,
     })
   }, [])
   return (
@@ -40,7 +43,10 @@ export const ProductCard = ({
       <Link href={`/product/${Math.random()}`}>
         <div
           ref={elRef}
-          className="w-full relative bg-[#a9f9ff] rounded-[20px]
+          onMouseOver={() => setCurrentHover(product)}
+          onMouseLeave={()=>setCurrentHover('')}
+          className={clsx(
+            `w-full  relative bg-[#a9f9ff] rounded-[20px]
     before:content-[''] before:absolute before:top-[-3px] before:left-[-3px] before:right-[-3px]
     before:bottom-[-3px] before:border-[3px] before:border-[#61e7ff] before:animate-clippath
     before:rounded-[25px] after:content-[''] after:absolute after:top-[-3px] after:left-[-3px]
@@ -55,7 +61,12 @@ export const ProductCard = ({
     p-[10px]
     hover:z-[1]
     cursor-pointer
-    "
+    `,
+            {
+              'opacity-30': currentHover !== product,
+              '!blur-none !opacity-100':currentHover ===''
+            },
+          )}
         >
           <div className="w-full aspect-[2.3/1] bg-[#86e2fc] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
             <div>

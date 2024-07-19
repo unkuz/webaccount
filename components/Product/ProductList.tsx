@@ -26,6 +26,10 @@ export const ProductList = () => {
   }
 
   const isDisabledBtn = (i: string) => i === selected
+
+  const [currentHover, setCurrentHover] = useState('')
+
+  console.log('currentHover', currentHover)
   return (
     <div className="flex flex-col gap-[8px]">
       <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>
@@ -56,7 +60,12 @@ export const ProductList = () => {
       </div>
       <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[25px] mt-[5px]">
         {listProduct.map((i, idx) => (
-          <ProductCard key={idx} {...i} />
+          <ProductCard
+            key={idx}
+            {...i}
+            setCurrentHover={setCurrentHover}
+            currentHover={currentHover}
+          />
         ))}
       </div>
     </div>
