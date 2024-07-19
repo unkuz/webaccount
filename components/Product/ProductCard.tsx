@@ -60,7 +60,7 @@ export const ProductCard = ({
           <div className="w-full aspect-[2.3/1] bg-[#aeecff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
             <div>
               <p className="font-bold text-[25px]">Gói gia hạn</p>
-              <p className="font-extrabold text-[45px] text-[#000000]">{product}</p>
+              <p className="font-extrabold text-[45px] text-[#3f3f3f]">{product}</p>
               <p className="font-bold text-[25px]">{duration}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: svg }} className="w-[150px]"></div>
