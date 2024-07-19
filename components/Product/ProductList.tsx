@@ -54,7 +54,7 @@ export const ProductList = () => {
           </button>
         ))}
       </div>
-      <div className="grid xl:grid-cols-3 grid-cols-2 gap-[20px] mt-[5px]">
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[25px] mt-[5px]">
         {listProduct.map((i, idx) => (
           <ProductCard key={idx} {...i} />
         ))}

@@ -29,9 +29,9 @@ export const ProductCard = ({
 
   useEffect(() => {
     VanillaTilt.init(elRef.current!, {
-      scale: 1.0,
+      scale: 1.1,
       glare: true,
-      speed: 10_000,
+      speed: 2_000,
       gyroscope: true,
     })
   }, [])
@@ -59,11 +59,11 @@ export const ProductCard = ({
         >
           <div className="w-full aspect-[2.3/1] bg-[#aeecff] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
             <div>
-              <p className="font-bold text-[25px]">Gói gia hạn</p>
-              <p className="font-extrabold text-[45px] text-[#000000]">{product}</p>
-              <p className="font-bold text-[25px]">{duration}</p>
+              <p className="font-bold text-[20px]">Gói gia hạn</p>
+              <p className="font-extrabold text-[35px] text-[#000000]">{product}</p>
+              <p className="font-bold text-[20px]">{duration}</p>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: svg }} className="w-[150px]"></div>
+            <div dangerouslySetInnerHTML={{ __html: svg }} className="w-[30%] absolute top-1/2 -translate-y-1/2 right-[20px]"></div>
           </div>
           <div className="mt-[5px]">
             <p className="font-bold">{description}</p>

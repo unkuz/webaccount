@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={clsx(
           wixMadeforDisplay.className,
-          'xl:w-[1500px] w-full mx-auto pb-[100px] px-[10px]',
+          'max-w-[1280px] w-full mx-auto pb-[100px] px-[10px] sm:px-[25px]',
         )}
       >
         <Header />

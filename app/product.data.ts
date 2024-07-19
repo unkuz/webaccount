@@ -18,7 +18,7 @@ export const listProduct = [
         </svg>`,
   },
   {
-    product: 'GPT Plus',
+    product: 'GPT',
     productFull: 'GPT Plus',
     duration: '1 tháng',
     sale: '450',
