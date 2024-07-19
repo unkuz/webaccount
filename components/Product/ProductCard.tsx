@@ -63,7 +63,10 @@ export const ProductCard = ({
               <p className="font-extrabold text-[35px] text-[#000000]">{product}</p>
               <p className="font-bold text-[20px]">{duration}</p>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: svg }} className="w-[30%] absolute top-1/2 -translate-y-1/2 right-[20px]"></div>
+            <div
+              dangerouslySetInnerHTML={{ __html: svg }}
+              className="w-[30%] absolute top-1/2 -translate-y-1/2 right-[20px]"
+            ></div>
           </div>
           <div className="mt-[5px]">
             <p className="font-bold">{description}</p>
