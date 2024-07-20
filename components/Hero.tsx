@@ -1,5 +1,5 @@
 'use client'
-import { TIMER_HERO } from '@/config/app'
+import { appConfig } from '@/config/app'
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import { useEffect, useRef } from 'react'
@@ -18,7 +18,7 @@ export const Hero = () => {
   useEffect(() => {
     timer.current = setInterval(() => {
       instanceRef.current?.next()
-    }, TIMER_HERO)
+    }, appConfig.timerHero)
 
     return () => {
       clearInterval(timer.current)
@@ -26,7 +26,7 @@ export const Hero = () => {
   })
 
   return (
-    <div className="group relative cursor-pointer">
+    <div className="group relative cursor-pointer overflow-hidden">
       <div
         ref={sliderRef}
         className="keen-slider clip-path-saw relative aspect-[2.5/1] text-[1.5rem] shadow-xl *:flex *:items-center *:justify-center *:text-black sm:!aspect-[3.2/1] sm:text-[2rem] lg:text-[3.5rem]"
