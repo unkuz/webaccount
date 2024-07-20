@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="h-[30px]"></div>
+      <div className="h-[35px]"></div>
       <ProductList />
     </div>
   )

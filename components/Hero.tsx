@@ -8,7 +8,7 @@ export const Hero = () => {
   const timer = useRef<NodeJS.Timeout>()
   const [sliderRef, instanceRef] = useKeenSlider(
     {
-      renderMode: 'performance',
+      renderMode: 'precision',
       loop: true,
       slideChanged() {},
     },
