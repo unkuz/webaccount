@@ -42,6 +42,7 @@ export const ProductCard = ({
     VanillaTilt.init(elRef.current!, {
       scale: 1.1,
       speed: 2_000,
+      max: 5,
     })
   }, [])
 
@@ -75,9 +76,9 @@ export const ProductCard = ({
           )}
         >
           <div>
-            <p className="text-[20px] font-bold text-[#3a3a3ade]">Gói gia hạn</p>
-            <p className="z-10 text-[35px] font-extrabold text-[#3a3a3a]">{product}</p>
-            <p className="text-[20px] font-bold text-[#3a3a3a]">{duration}</p>
+            <p className="text-[20px] font-bold text-[#000000de]">Gói gia hạn</p>
+            <p className="z-10 text-[35px] font-extrabold text-[#000000]">{product}</p>
+            <p className="text-[20px] font-bold text-[#000000]">{duration}</p>
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: svg }}
@@ -87,14 +88,14 @@ export const ProductCard = ({
         </div>
 
         <div className="mt-[5px]">
-          <p className="font-bold text-[#3a3a3a]">{description}</p>
+          <p className="font-bold text-[#000000]">{description}</p>
           <div className="flex justify-between">
             <p className="flex items-center gap-[10px] font-bold">
               <span className="text-[21px] font-extrabold text-[#000000]">{sale}.000đ</span>
               <span className="text-[#7e7e7e] line-through">{preSale}.000đ</span>
             </p>
             <button
-              className="flex h-[35px] items-center justify-center rounded-[35px] bg-[#000000] px-[10px]"
+              className="flex h-[35px] cursor-pointer items-center justify-center overflow-hidden rounded-[35px] bg-[#000000] px-[10px] duration-200"
               title="Thêm vào giỏ hàng"
             >
               <Image alt="Giỏ hàng" src={CartIcon} className="cursor-pointer invert" />
