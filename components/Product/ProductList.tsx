@@ -28,8 +28,6 @@ export const ProductList = () => {
   const isDisabledBtn = (i: string) => i === selected
 
   const [currentHover, setCurrentHover] = useState('')
-
-  console.log('currentHover', currentHover)
   return (
     <div className="flex flex-col gap-[8px]">
       <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>
@@ -40,21 +38,20 @@ export const ProductList = () => {
             onClick={() => onSelect(i)}
             disabled={isDisabledBtn(i)}
             className={clsx(
-              'flex h-[38px] items-center gap-[5px] rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize duration-200',
+              'flex h-[38px] items-center rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize',
 
               selected !== i ? 'ring-1 ring-inset ring-gray-300' : 'bg-[black] text-white',
             )}
           >
             <span>{i}</span>
-            {selected === i && loading && (
-              <Image
-                alt="Loading"
-                src={ArrowCircleIcon}
-                className={clsx('w-[20px] animate-spin', {
-                  invert: selected === i,
-                })}
-              />
-            )}
+            <Image
+              alt="Loading"
+              src={ArrowCircleIcon}
+              className={clsx('w-0 animate-spin opacity-0 duration-100', {
+                invert: selected === i,
+                'ml-[5px] !w-[20px] opacity-100': selected === i && loading,
+              })}
+            />
           </button>
         ))}
       </div>

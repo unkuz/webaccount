@@ -18,8 +18,8 @@ export const appConfig = {
     },
     {
       insetBorder: '#eeff59',
-      bgWraper: '#f3ff89',
-      bgInner: '#edff46c7',
+      bgWraper: '#f8ff93',
+      bgInner: '#e9ff26bd',
     },
   ],
 }
