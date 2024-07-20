@@ -8,7 +8,7 @@ export const Footer = () => {
 
   return (
     <div className="flex h-[100px] w-full items-center justify-between border-t-[1px] border-[#e4e4e49a] bg-[#ffffffb0] backdrop-blur-[2px]">
-      <span className="text-[20px] font-bold">{`©${currentYear} webaccgiare.store`}</span>
+      <span className="text-[18px] font-bold">{`©${currentYear} webaccgiare.store`}</span>
       <div className="flex items-end gap-[30px]">
         <Link href={'https://www.facebook.com/webaccgiare.store/'} target="_blank">
           <div className="flex cursor-pointer flex-col items-center">
