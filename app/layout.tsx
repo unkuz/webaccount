@@ -23,6 +23,7 @@ export default function RootLayout({
         className={clsx(
           wixMadeforDisplay.className,
           'mx-auto w-full max-w-[1280px] px-[10px] pb-[100px] sm:px-[25px]',
+          'selection:bg-black selection:text-white',
         )}
       >
         <Header />
