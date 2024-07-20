@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { ProductCard } from './ProductCard'
 import ArrowCircleIcon from '@/assets/svgs/arrow-circle-icon.svg'
 import Image from 'next/image'
-import { listProduct } from '@/app/product.data'
+import { listProduct } from '@/config/product.data'
 
 export const ProductList = () => {
   const [type, setType] = useState(['tất cả', 'học tập', 'giải trí', 'phim ảnh'])

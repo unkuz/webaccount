@@ -1,5 +1,5 @@
 'use client'
-import { TIMER_HERO } from '@/app/config'
+import { TIMER_HERO } from '@/config/app'
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import { useEffect, useRef } from 'react'
