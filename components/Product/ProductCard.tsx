@@ -53,7 +53,7 @@ export const ProductCard = ({
             },
           )}
         >
-          <div className="relative flex aspect-[2.3/1] w-full justify-between overflow-hidden rounded-[15px] bg-[#86e2fc] p-[20px] backdrop-blur-lg">
+          <div className="clip-path-saw relative flex aspect-[2.3/1] w-full justify-between overflow-hidden rounded-[15px] bg-[#86e2fc] p-[20px] backdrop-blur-lg">
             <div>
               <p className="text-[20px] font-bold text-[#3a3a3a]">Gói gia hạn</p>
               <p className="z-10 text-[35px] font-extrabold text-[#3a3a3a]">{product}</p>
