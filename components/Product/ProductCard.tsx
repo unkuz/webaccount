@@ -55,13 +55,13 @@ export const ProductCard = ({
         >
           <div className="clip-path-saw relative flex aspect-[2.3/1] w-full justify-between overflow-hidden rounded-[15px] bg-[#86e2fc] p-[20px] backdrop-blur-lg">
             <div>
-              <p className="text-[20px] font-bold text-[#3a3a3a]">Gói gia hạn</p>
+              <p className="text-[20px] font-bold text-[#3a3a3ade]">Gói gia hạn</p>
               <p className="z-10 text-[35px] font-extrabold text-[#3a3a3a]">{product}</p>
               <p className="text-[20px] font-bold text-[#3a3a3a]">{duration}</p>
             </div>
             <div
               dangerouslySetInnerHTML={{ __html: svg }}
-              className="absolute right-[20px] top-1/2 w-[30%] -translate-y-1/2"
+              className="absolute right-[20px] top-1/2 w-[28%] -translate-y-1/2"
             />
             <div className="absolute left-[-15%] top-[-15%] h-[130%] w-[20px] rotate-[25deg] bg-[#ffffffd8] opacity-0 backdrop-blur-lg group-hover:animate-fare group-hover:opacity-100" />
           </div>
@@ -69,8 +69,8 @@ export const ProductCard = ({
           <div className="mt-[5px]">
             <p className="font-bold text-[#3a3a3a]">{description}</p>
             <p className="flex items-center gap-[10px] font-bold">
-              <span className="text-[22px] font-extrabold text-[#0b293d]">{sale}.000đ</span>
-              <span className="text-[#858585] line-through blur-sm">{preSale}.000đ</span>
+              <span className="text-[22px] font-extrabold text-[#000000]">{sale}.000đ</span>
+              <span className="text-[#7e7e7e] line-through">{preSale}.000đ</span>
             </p>
           </div>
         </div>
