@@ -4,6 +4,7 @@ import '@/styles/global.scss'
 import { Header } from '@/components/Header'
 import { clsx } from 'clsx'
 import { Hero } from '@/components/Hero'
+import { Footer } from '@/components/Footer'
 
 const wixMadeforDisplay = Wix_Madefor_Display({ subsets: ['vietnamese'] })
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body
         className={clsx(
           wixMadeforDisplay.className,
-          'mx-auto w-full max-w-[1280px] px-[10px] pb-[100px] sm:px-[25px]',
+          'mx-auto w-full max-w-[1280px] px-[10px] sm:px-[25px]',
           'selection:bg-black selection:text-white',
           'relative',
         )}
@@ -30,6 +31,8 @@ export default function RootLayout({
         <Header />
         <div className="h-[20px]" />
         {children}
+        <div className="h-[100px]"></div>
+        <Footer />
       </body>
     </html>
   )
