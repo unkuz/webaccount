@@ -15,10 +15,19 @@ const config: Config = {
           '50%': { clipPath: 'inset(98% 0 0 0)' },
           '75%': { clipPath: 'inset(0 0 0 98%)' },
         },
+        fare: {
+          '0%': {
+            left: '-10%',
+          },
+          '100%': {
+            left: '110%',
+          },
+        },
       },
       animation: {
         clippath: 'clippath 3s linear infinite',
         'clippath-delay': 'clippath 3s linear 1.5s infinite',
+        fare: 'fare .5s',
       },
     },
   },
