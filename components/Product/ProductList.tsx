@@ -33,16 +33,16 @@ export const ProductList = () => {
   return (
     <div className="flex flex-col gap-[8px]">
       <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>
-      <div className="flex gap-[10px] flex-wrap">
+      <div className="flex flex-wrap gap-[10px]">
         {type.map((i, idx) => (
           <button
             key={idx}
             onClick={() => onSelect(i)}
             disabled={isDisabledBtn(i)}
             className={clsx(
-              'px-[13px] h-[38px] bg-[#fff0] rounded-[38px] font-bold capitalize flex items-center gap-[5px] duration-200',
+              'flex h-[38px] items-center gap-[5px] rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize duration-200',
 
-              selected !== i ? 'ring-1 ring-inset ring-gray-300' : ' bg-[black] text-white',
+              selected !== i ? 'ring-1 ring-inset ring-gray-300' : 'bg-[black] text-white',
             )}
           >
             <span>{i}</span>
@@ -58,7 +58,7 @@ export const ProductList = () => {
           </button>
         ))}
       </div>
-      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[25px] mt-[5px]">
+      <div className="mt-[5px] grid grid-cols-2 gap-[10px] sm:gap-[25px] xl:grid-cols-3">
         {listProduct.map((i, idx) => (
           <ProductCard
             key={idx}

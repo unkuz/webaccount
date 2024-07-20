@@ -4,12 +4,12 @@ import SearchIcon from '@/assets/svgs/search-icon.svg'
 
 export const Search = () => {
   return (
-    <div className="w-[500px] h-[55px] rounded-[15px] border-[2px] border-[#29dfff] overflow-hidden flex">
+    <div className="flex h-[55px] w-[500px] overflow-hidden rounded-[15px] border-[2px] border-[#29dfff]">
       <input
-        className="w-[400px] h-full  flex-1 focus:outline-none px-[20px] caret-[#00e1ff] font-semibold"
+        className="h-full w-[400px] flex-1 px-[20px] font-semibold caret-[#00e1ff] focus:outline-none"
         placeholder="Tìm kiếm"
       />
-      <Image src={SearchIcon} alt="Search Icon" className="w-[50px] px-[10px] cursor-pointer" />
+      <Image src={SearchIcon} alt="Search Icon" className="w-[50px] cursor-pointer px-[10px]" />
     </div>
   )
 }

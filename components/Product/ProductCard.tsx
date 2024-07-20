@@ -44,46 +44,31 @@ export const ProductCard = ({
         <div
           ref={elRef}
           onMouseOver={() => setCurrentHover(product)}
-          onMouseLeave={()=>setCurrentHover('')}
+          onMouseLeave={() => setCurrentHover('')}
           className={clsx(
-            `w-full  relative bg-[#a9f9ff] rounded-[20px]
-    before:content-[''] before:absolute before:top-[-3px] before:left-[-3px] before:right-[-3px]
-    before:bottom-[-3px] before:border-[3px] before:border-[#61e7ff] before:animate-clippath
-    before:rounded-[25px] after:content-[''] after:absolute after:top-[-3px] after:left-[-3px]
-    after:right-[-3px] after:bottom-[-3px] after:border-[3px] after:border-[#61e7ff] after:animate-clippath-delay
-    after:rounded-[25px] 
-    before:opacity-0
-    after:opacity-0
-    hover:before:opacity-100
-    hover:after:opacity-100
-    duration-500
-    shadow-md
-    p-[10px]
-    hover:z-[1]
-    cursor-pointer
-    `,
+            `relative w-full cursor-pointer rounded-[20px] bg-[#a9f9ff] p-[10px] shadow-md duration-500 before:absolute before:bottom-[-3px] before:left-[-3px] before:right-[-3px] before:top-[-3px] before:animate-clippath before:rounded-[25px] before:border-[3px] before:border-[#61e7ff] before:opacity-0 before:content-[''] after:absolute after:bottom-[-3px] after:left-[-3px] after:right-[-3px] after:top-[-3px] after:animate-clippath-delay after:rounded-[25px] after:border-[3px] after:border-[#61e7ff] after:opacity-0 after:content-[''] hover:z-[1] hover:before:opacity-100 hover:after:opacity-100`,
             {
               'opacity-30': currentHover !== product,
-              '!blur-none !opacity-100':currentHover ===''
+              '!opacity-100 !blur-none': currentHover === '',
             },
           )}
         >
-          <div className="w-full aspect-[2.3/1] bg-[#86e2fc] backdrop-blur-lg rounded-[15px] relative p-[20px] flex justify-between">
+          <div className="relative flex aspect-[2.3/1] w-full justify-between rounded-[15px] bg-[#86e2fc] p-[20px] backdrop-blur-lg">
             <div>
-              <p className="font-bold text-[20px]">Gói gia hạn</p>
-              <p className="font-extrabold text-[35px] text-[#000000]">{product}</p>
-              <p className="font-bold text-[20px]">{duration}</p>
+              <p className="text-[20px] font-bold text-[#3a3a3a]">Gói gia hạn</p>
+              <p className="z-10 text-[35px] font-extrabold text-[#3a3a3a]">{product}</p>
+              <p className="text-[20px] font-bold text-[#3a3a3a]">{duration}</p>
             </div>
             <div
               dangerouslySetInnerHTML={{ __html: svg }}
-              className="w-[30%] absolute top-1/2 -translate-y-1/2 right-[20px]"
+              className="absolute right-[20px] top-1/2 w-[30%] -translate-y-1/2"
             ></div>
           </div>
           <div className="mt-[5px]">
-            <p className="font-bold">{description}</p>
-            <p className="font-bold flex gap-[10px] items-center">
-              <span className="text-[22px] text-[#000000] font-extrabold">{sale}.000đ</span>
-              <span className="line-through text-[#858585] blur-sm">{preSale}.000đ</span>
+            <p className="font-bold text-[#3a3a3a]">{description}</p>
+            <p className="flex items-center gap-[10px] font-bold">
+              <span className="text-[22px] font-extrabold text-[#0b293d]">{sale}.000đ</span>
+              <span className="text-[#858585] line-through blur-sm">{preSale}.000đ</span>
             </p>
           </div>
         </div>
