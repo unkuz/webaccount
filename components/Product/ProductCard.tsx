@@ -63,7 +63,7 @@ export const ProductCard = ({
               dangerouslySetInnerHTML={{ __html: svg }}
               className="absolute right-[20px] top-1/2 w-[30%] -translate-y-1/2"
             />
-            <div className="group-hover:animate-fare absolute left-[-15%] top-[-15%] h-[130%] w-[20px] rotate-[25deg] bg-[#fff] opacity-0 group-hover:opacity-100"/>
+            <div className="absolute left-[-15%] top-[-15%] h-[130%] w-[20px] rotate-[25deg] bg-[#ffffffd8] opacity-0 backdrop-blur-lg group-hover:animate-fare group-hover:opacity-100" />
           </div>
 
           <div className="mt-[5px]">
