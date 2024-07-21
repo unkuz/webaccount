@@ -31,7 +31,11 @@ export const Search = () => {
         placeholder="Tìm kiếm"
         onClick={() => setIsFocusInput(true)}
       />
-      <Image src={SearchIcon} alt="Search Icon" className="w-[50px] cursor-pointer px-[10px]" />
+      <Image
+        src={SearchIcon}
+        alt="Search Icon"
+        className="w-[50px] cursor-pointer select-none px-[10px]"
+      />
       <div
         className={clsx('absolute inset-0 z-[-10] w-0 bg-[#c4a0f34f] duration-200', {
           'w-full': isFocusInput,

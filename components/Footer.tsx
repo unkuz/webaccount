@@ -13,14 +13,14 @@ export const Footer = () => {
           <div>
             <Link
               href="/cau-hoi-thuong-gap"
-              className="flex cursor-pointer items-center gap-[10px] underline"
+              className="flex cursor-pointer items-center gap-[10px] underline active:text-[#a929ff]"
             >
               <p className="text-[20px] font-bold">FAQ</p>
               <Image src={ArrowTopIcon} alt="" />
             </Link>
             <Link
               href="/ve-chung-toi"
-              className="flex cursor-pointer items-center gap-[10px] underline"
+              className="flex cursor-pointer items-center gap-[10px] underline active:text-[#a929ff]"
             >
               <p className="text-[20px] font-bold">About Us</p>
               <Image src={ArrowTopIcon} alt="" />
@@ -35,17 +35,31 @@ export const Footer = () => {
           <Link
             href={'https://www.facebook.com/webaccgiare.store/'}
             target="_blank"
-            className="cursor-pointer"
+            className="group cursor-pointer"
           >
             <button className="flex flex-col items-center">
-              <Image src={FacebookIcon} alt="Facebook" title="Facebook" className="w-[35px]" />
+              <Image
+                src={FacebookIcon}
+                alt="Facebook"
+                title="Facebook"
+                className="w-[35px] select-none duration-100 group-active:scale-125"
+              />
               <span className="text-[12px] font-bold">Facebook</span>
             </button>
           </Link>
 
-          <Link href={'https://zalo.me/0888388859'} target="_blank" className="cursor-pointer">
+          <Link
+            href={'https://zalo.me/0888388859'}
+            target="_blank"
+            className="group cursor-pointer"
+          >
             <button className="flex flex-col items-center">
-              <Image src={ZaloIcon} alt="Zalo" title="Zalo" className="w-[35px]" />
+              <Image
+                src={ZaloIcon}
+                alt="Zalo"
+                title="Zalo"
+                className="w-[35px] select-none duration-100 group-active:scale-125"
+              />
               <span className="text-[12px] font-bold">Zalo</span>
             </button>
           </Link>
