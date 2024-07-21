@@ -3,7 +3,7 @@ import ArrowCircleIcon from '@/assets/svgs/arrow-circle-icon.svg'
 import { listProduct } from '@/config/product.data'
 import clsx from 'clsx'
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ProductCard } from './ProductCard'
 
 export const ProductList = () => {
@@ -28,6 +28,10 @@ export const ProductList = () => {
   const isDisabledBtn = (i: string) => i === selected
 
   const [currentHover, setCurrentHover] = useState('')
+
+  useEffect(() => {
+    console.log('sdfsdf')
+  }, [currentHover])
   return (
     <div className="flex flex-col gap-[8px]">
       <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>

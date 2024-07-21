@@ -17,10 +17,10 @@ const config: Config = {
         },
         fare: {
           '0%': {
-            left: '-10%',
+            left: '-15%',
           },
           '100%': {
-            left: '110%',
+            left: '115%',
           },
         },
       },

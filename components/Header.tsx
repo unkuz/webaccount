@@ -8,7 +8,7 @@ export const Header = () => {
   const [numItems, setNumItems] = useState<number>(5)
 
   return (
-    <header className="sticky top-0 z-10 flex h-[100px] w-full items-center justify-between border-b-[1px] border-[#e4e4e49a] bg-[#ffffffb0] backdrop-blur-[2px]">
+    <header className="sticky top-0 z-10 flex h-[100px] w-full items-center justify-between border-b-[2px] border-[#e4e4e49a] bg-[#ffffffb0] backdrop-blur-[2px]">
       <p className="rotate-[-15deg] text-[38px] font-bold">E</p>
       <Search />
       <button className="relative cursor-pointer">

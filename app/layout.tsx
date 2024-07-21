@@ -23,7 +23,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={clsx(
           wixMadeforDisplay.className,
-          'mx-auto w-full max-w-[1280px] px-[10px] sm:px-[25px]',
+          'mx-auto w-full max-w-[1280px] px-[10px] sm:px-[25px] md:px-[35px] lg:px-[50px]',
           'selection:bg-black selection:text-white',
           'relative',
         )}
