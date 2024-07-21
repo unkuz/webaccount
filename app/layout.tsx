@@ -29,7 +29,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="mb-[100px] mt-[20px]">{children}</main>
+        <main className="mb-[100px] mt-[120px]">{children}</main>
         <Footer />
       </body>
     </html>

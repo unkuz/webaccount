@@ -8,26 +8,26 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="mb-[100px] flex w-full items-start justify-between border-t-[2px] border-[#e4e4e49a] bg-[#ffffffb0] pt-[30px] backdrop-blur-[2px]">
+      <footer className="mb-[150px] flex w-full items-start justify-between border-t-[2px] border-[#e4e4e49a] bg-[#ffffffb0] pt-[30px] backdrop-blur-[2px]">
         <div>
           <div>
             <Link
               href="/cau-hoi-thuong-gap"
-              className="flex cursor-pointer items-center gap-[10px] underline active:text-[#a929ff]"
+              className="flex cursor-pointer items-center gap-[10px] underline visited:text-[#a929ff] active:text-[#a929ff]"
             >
               <p className="text-[20px] font-bold">FAQ</p>
               <Image src={ArrowTopIcon} alt="" />
             </Link>
             <Link
               href="/ve-chung-toi"
-              className="flex cursor-pointer items-center gap-[10px] underline active:text-[#a929ff]"
+              className="flex cursor-pointer items-center gap-[10px] underline visited:text-[#a929ff] active:text-[#a929ff]"
             >
               <p className="text-[20px] font-bold">About Us</p>
               <Image src={ArrowTopIcon} alt="" />
             </Link>
           </div>
           <div className="mt-[30px]">
-            <span className="text-[18px] font-bold">{`©${currentYear} webaccgiare.store`}</span>
+            <span className="text-[18px] font-bold">{`©${currentYear} Webaccgiare`}</span>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export const Footer = () => {
                 title="Facebook"
                 className="w-[35px] select-none duration-100 group-active:scale-125"
               />
-              <span className="text-[12px] font-bold">Facebook</span>
+              <span className="text-[15px] font-bold">Facebook</span>
             </button>
           </Link>
 
@@ -60,7 +60,7 @@ export const Footer = () => {
                 title="Zalo"
                 className="w-[35px] select-none duration-100 group-active:scale-125"
               />
-              <span className="text-[12px] font-bold">Zalo</span>
+              <span className="text-[15px] font-bold">Zalo</span>
             </button>
           </Link>
         </div>

@@ -29,7 +29,7 @@ export const Hero = () => {
     <div className="group relative cursor-pointer overflow-hidden">
       <div
         ref={sliderRef}
-        className="keen-slider clip-path-saw relative aspect-[2.5/1] text-[1.5rem] shadow-xl *:flex *:items-center *:justify-center *:text-black sm:!aspect-[3.2/1] sm:text-[2rem] lg:text-[3.5rem]"
+        className="keen-slider clip-path-saw relative aspect-[2.5/1] text-[1.5rem] *:flex *:items-center *:justify-center *:text-black sm:!aspect-[3.2/1] sm:text-[2rem] lg:text-[3.5rem]"
       >
         <div className="keen-slider__slide bg-[#93ec58] px-[20px] font-bold">
           <p className="text-center">Shop bán Account Premium</p>
