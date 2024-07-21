@@ -19,7 +19,7 @@ export const Footer = () => {
               <Image src={ArrowTopIcon} alt="" />
             </Link>
             <Link
-              href="/ve-chung-toi"
+              href="/"
               className="flex cursor-pointer items-center gap-[10px] underline visited:text-[#a929ff] active:text-[#a929ff]"
             >
               <p className="text-[20px] font-bold">About Us</p>
