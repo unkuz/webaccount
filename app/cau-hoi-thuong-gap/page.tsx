@@ -36,11 +36,15 @@ const FAQPage = () => {
         {listFAQ.map(({ a, q }, idx) => (
           <div key={idx}>
             <div className="text-[22px] font-bold">
-              <Image src={ArrowFaqIcon} alt="" className="mr-[10px] inline-block w-[30px]" />
+              <Image
+                src={ArrowFaqIcon}
+                alt=""
+                className="mr-[10px] inline-block w-[30px] select-none"
+              />
               <span className="text-pretty">{q}</span>
             </div>
             <div
-              className="text-[18px] font-bold text-[#474747]"
+              className="text-[18px] font-bold text-[#747474]"
               dangerouslySetInnerHTML={{ __html: a }}
             />
           </div>
