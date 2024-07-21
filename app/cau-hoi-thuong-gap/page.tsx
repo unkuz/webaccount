@@ -41,10 +41,10 @@ const FAQPage = () => {
                 alt=""
                 className="mr-[10px] inline-block w-[30px] select-none"
               />
-              <span className="text-pretty">{q}</span>
+              <span className="text-pretty text-justify">{q}</span>
             </div>
             <div
-              className="text-[18px] font-bold text-[#747474]"
+              className="text-justify text-[18px] font-bold text-[#747474]"
               dangerouslySetInnerHTML={{ __html: a }}
             />
           </div>
