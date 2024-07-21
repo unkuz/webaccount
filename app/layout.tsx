@@ -1,7 +1,7 @@
+import { ClientScr } from '@/components/ClientScr'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { PopUp } from '@/components/PopUp'
-import { usePopUp } from '@/store/popup'
 import '@/styles/global.scss'
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
@@ -10,8 +10,8 @@ import { Wix_Madefor_Display } from 'next/font/google'
 const wixMadeforDisplay = Wix_Madefor_Display({ subsets: ['vietnamese'] })
 
 export const metadata: Metadata = {
-  title: 'Shop Acc Premium',
-  description: 'Shop Acc Premium',
+  title: 'Shop Tài khoản Premium',
+  description: 'Shop Tài khoản Premium',
 }
 
 export default function RootLayout({
@@ -34,6 +34,7 @@ export default function RootLayout({
         <main className="mb-[100px] mt-[120px]">{children}</main>
         <Footer />
         <PopUp />
+        <ClientScr />
       </body>
     </html>
   )
