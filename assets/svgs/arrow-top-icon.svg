@@ -1,0 +1,19 @@
+<svg width="15" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.363953" y="0.908112" width="36" height="6" fill="black" />
+    <rect
+        x="30.364"
+        y="36.9081"
+        width="36"
+        height="6"
+        transform="rotate(-90 30.364 36.9081)"
+        fill="black"
+    />
+    <rect
+        x="3.51471"
+        y="29.5147"
+        width="36"
+        height="6"
+        transform="rotate(-45 3.51471 29.5147)"
+        fill="black"
+    />
+</svg>

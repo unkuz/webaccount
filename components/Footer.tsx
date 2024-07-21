@@ -2,13 +2,35 @@ import FacebookIcon from '@/assets/svgs/facebook-icon.svg'
 import ZaloIcon from '@/assets/svgs/zalo-icon.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import ArrowTopIcon from '@/assets/svgs/arrow-top-icon.svg'
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
     <>
-      <footer className="mb-[100px] flex h-[100px] w-full items-center justify-between border-t-[2px] border-[#e4e4e49a] bg-[#ffffffb0] backdrop-blur-[2px]">
-        <span className="text-[18px] font-bold">{`©${currentYear} webaccgiare.store`}</span>
+      <footer className="mb-[100px] flex w-full items-start justify-between border-t-[2px] border-[#e4e4e49a] bg-[#ffffffb0] pt-[30px] backdrop-blur-[2px]">
+        <div>
+          <div>
+            <Link
+              href="/cau-hoi-thuong-gap"
+              className="flex cursor-pointer items-center gap-[10px] underline"
+            >
+              <p className="text-[20px] font-bold">FAQ</p>
+              <Image src={ArrowTopIcon} alt="" />
+            </Link>
+            <Link
+              href="/ve-chung-toi"
+              className="flex cursor-pointer items-center gap-[10px] underline"
+            >
+              <p className="text-[20px] font-bold">About Us</p>
+              <Image src={ArrowTopIcon} alt="" />
+            </Link>
+          </div>
+          <div className="mt-[30px]">
+            <span className="text-[18px] font-bold">{`©${currentYear} webaccgiare.store`}</span>
+          </div>
+        </div>
+
         <div className="flex items-end gap-[30px]">
           <Link
             href={'https://www.facebook.com/webaccgiare.store/'}
