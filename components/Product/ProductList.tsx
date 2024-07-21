@@ -35,7 +35,7 @@ export const ProductList = () => {
   return (
     <div className="flex flex-col gap-[8px]">
       <h2 className="text-[22px] font-bold">Sản phẩm đang bán </h2>
-      <div className="flex flex-wrap gap-[10px]">
+      <div className="inline-flex w-full gap-[10px] overflow-x-scroll [scrollbar-width:none]">
         {type.map((i, idx) => (
           <button
             key={idx}
@@ -47,13 +47,13 @@ export const ProductList = () => {
               selected !== i ? 'ring-1 ring-inset ring-gray-300' : 'bg-[black] text-white',
             )}
           >
-            <span>{i}</span>
+            <span className="text-nowrap">{i}</span>
             <Image
               alt="Loading"
               src={ArrowCircleIcon}
               className={clsx('w-0 animate-spin opacity-0 duration-100', {
                 invert: selected === i,
-                'ml-[5px] !w-[20px] opacity-100': selected === i && loading,
+                'ml-[5px] !w-[20px] min-w-[20px] opacity-100': selected === i && loading,
               })}
             />
           </button>
