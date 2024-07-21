@@ -1,10 +1,10 @@
 'use client'
-import React, { useMemo, useRef, useState } from 'react'
-import clsx from 'clsx'
-import { ProductCard } from './ProductCard'
 import ArrowCircleIcon from '@/assets/svgs/arrow-circle-icon.svg'
-import Image from 'next/image'
 import { listProduct } from '@/config/product.data'
+import clsx from 'clsx'
+import Image from 'next/image'
+import { useRef, useState } from 'react'
+import { ProductCard } from './ProductCard'
 
 export const ProductList = () => {
   const [type, setType] = useState(['tất cả', 'học tập', 'giải trí', 'phim ảnh'])
@@ -38,7 +38,7 @@ export const ProductList = () => {
             onClick={() => onSelect(i)}
             disabled={isDisabledBtn(i)}
             className={clsx(
-              'flex h-[38px] items-center rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize',
+              'flex h-[38px] cursor-pointer items-center rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize',
 
               selected !== i ? 'ring-1 ring-inset ring-gray-300' : 'bg-[black] text-white',
             )}

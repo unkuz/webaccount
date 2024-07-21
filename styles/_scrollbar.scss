@@ -1,0 +1,14 @@
+/* Custom ScrollBar Chrome Opera */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #00b3ff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0088;
+}

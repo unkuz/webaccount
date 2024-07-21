@@ -1,11 +1,10 @@
+import CartIcon from '@/assets/svgs/cart-icon.svg'
+import { appConfig } from '@/config/app'
 import clsx from 'clsx'
-import Link from 'next/link'
+import _ from 'lodash'
+import Image from 'next/image'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import VanillaTilt from 'vanilla-tilt'
-import _ from 'lodash'
-import { appConfig } from '@/config/app'
-import CartIcon from '@/assets/svgs/cart-icon.svg'
-import Image from 'next/image'
 
 type Props = {
   product: string
@@ -49,10 +48,6 @@ export const ProductCard = ({
   useLayoutEffect(() => {
     setColors(_.sample(appConfig.colorPalletProductCard)!)
   }, [])
-
-  useEffect(() => {
-    console.log('first')
-  }, [currentHover])
 
   return (
     <>
@@ -98,7 +93,7 @@ export const ProductCard = ({
               className="flex h-[35px] cursor-pointer items-center justify-center overflow-hidden rounded-[35px] bg-[#000000] px-[10px] duration-200"
               title="Thêm vào giỏ hàng"
             >
-              <Image alt="Giỏ hàng" src={CartIcon} className="cursor-pointer invert" />
+              <Image alt="Giỏ hàng" src={CartIcon} className="invert" />
             </button>
           </div>
         </div>

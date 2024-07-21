@@ -1,6 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
 import SearchIcon from '@/assets/svgs/search-icon.svg'
+import Image from 'next/image'
 
 export const Search = () => {
   return (

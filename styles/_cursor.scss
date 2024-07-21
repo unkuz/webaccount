@@ -1,0 +1,10 @@
+* {
+  cursor: url('../assets/cursor/pointer.cur'), auto;
+}
+
+.cursor-pointer {
+  & * {
+    cursor: url('../assets/cursor/link.cur'), auto ;
+  }
+  cursor: url('../assets/cursor/link.cur'), auto ;
+}
