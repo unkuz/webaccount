@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { PopUp } from '@/components/PopUp'
 import '@/styles/global.scss'
+import { Analytics } from '@vercel/analytics/react'
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 import { Wix_Madefor_Display } from 'next/font/google'
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="mb-[100px] mt-[120px]">{children}</main>
+        <Analytics />
         <Footer />
         <PopUp />
         <ClientScr />
