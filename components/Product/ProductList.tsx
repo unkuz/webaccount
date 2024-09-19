@@ -1,9 +1,10 @@
 'use client'
 import ArrowCircleIcon from '@/assets/svgs/arrow-circle-icon.svg'
 import { listProduct } from '@/config/product.data'
+import { sleep } from '@/utils/main'
 import clsx from 'clsx'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { ProductCard } from './ProductCard'
 
 export const ProductList = () => {
@@ -13,19 +14,14 @@ export const ProductList = () => {
 
   const [loading, setLoading] = useState(false)
 
-  const timerLoading = useRef<NodeJS.Timeout>()
-
-  const onSelect = (name: string) => {
-    clearTimeout(timerLoading.current)
-    setLoading(true)
-
-    timerLoading.current = setTimeout(() => {
-      setLoading(false)
-    }, 1_000)
+  const onSelect = async (name: string) => {
     setSelected(name)
+    setLoading(true)
+    await sleep(1)
+    setLoading(false)
   }
 
-  const isDisabledBtn = (i: string) => i === selected
+  const isDisabledBtn = useCallback((i: string) => i === selected, [selected])
 
   const [currentHover, setCurrentHover] = useState('')
 
@@ -43,7 +39,6 @@ export const ProductList = () => {
             disabled={isDisabledBtn(i)}
             className={clsx(
               'flex h-[38px] cursor-pointer items-center rounded-[38px] bg-[#fff0] px-[13px] font-bold capitalize',
-
               selected !== i ? 'ring-1 ring-inset ring-gray-300' : 'bg-[black] text-white',
             )}
           >

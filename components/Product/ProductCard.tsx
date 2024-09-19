@@ -1,7 +1,7 @@
 import CartIcon from '@/assets/svgs/cart-icon.svg'
 import { appConfig } from '@/config/app'
 import clsx from 'clsx'
-import _ from 'lodash'
+import { sample } from 'lodash'
 import Image from 'next/image'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import VanillaTilt from 'vanilla-tilt'
@@ -46,7 +46,7 @@ export const ProductCard = ({
   }, [])
 
   useLayoutEffect(() => {
-    setColors(_.sample(appConfig.colorPalletProductCard)!)
+    setColors(sample(appConfig.colorPalletProductCard)!)
   }, [])
 
   return (
